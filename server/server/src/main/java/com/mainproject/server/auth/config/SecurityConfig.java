@@ -48,7 +48,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeHttpRequests(authorize -> authorize
                         .antMatchers(HttpMethod.GET,"/api/members/ranking").permitAll()
                         .antMatchers(HttpMethod.PATCH,"/**").hasRole("USER")
-//                        .antMatchers(HttpMethod.GET,"/api/members/**").hasRole("USER")
                         .antMatchers("/**").permitAll()
                         .anyRequest().permitAll())
                 .logout().logoutSuccessUrl("/")
