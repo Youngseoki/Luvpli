@@ -130,11 +130,11 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 
         return UriComponentsBuilder
                 .newInstance()
-                .scheme("http")
-                .host("localhost")
-//                .scheme("https")
-//                .host("luvpli.link")
-                .port(3000)
+//                .scheme("http")
+//                .host("localhost")
+                .scheme("https")
+                .host("luvpli.link")
+//                .port(3000)
                 .path("/loginCallback")
                 .queryParams(queryParams)
                 .build()
